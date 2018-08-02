@@ -65,6 +65,13 @@ const movies = [
     genre: { _id: "5b21ca3eeb7f6fbccd471818", name: "Action" },
     numberInStock: 7,
     dailyRentalRate: 3.5
+  },
+  {
+    _id: "5b21ca3eeb7f6fbccd471825",
+    title: "Harry Potter and the Prisoner of Azkaban",
+    genre: { _id: "5b21ca3eeb7f6fbcad471835", name: "Fantasy" },
+    numberInStock: 4,
+    dailyRentalRate: 3.5
   }
 ];
 
