@@ -8,3 +8,11 @@ body {
   font-family: sans-serif;
   background-color: #888;
 }
+
+nav {
+  margin-bottom: 2rem;
+}
+
+.navbar {
+  background-color: #777;
+}
