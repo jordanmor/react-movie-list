@@ -15,7 +15,7 @@ class Movies extends Component {
    };
 
    componentDidMount() {
-    const genres = [{ name: "All Genres", _id: "all"}, ...getGenres()]
+    const genres = [{ name: "All Genres", _id: ""}, ...getGenres()]
 
      this.setState({ movies: getMovies(), genres });
    }
@@ -58,7 +58,7 @@ class Movies extends Component {
     if (count === 0) return <p>There are no movies in the database.</p>
 
     const filtered = 
-      selectedGenre && selectedGenre._id !== 'all'
+      selectedGenre && selectedGenre._id
         ? allMovies.filter(m => m.genre._id === selectedGenre._id)
         : allMovies;
 
@@ -70,7 +70,8 @@ class Movies extends Component {
           <ListGroup 
             items={genres}
             selectedItem={selectedGenre}
-            onItemSelect={this.handleGenreSelect} />
+            onItemSelect={this.handleGenreSelect} 
+          />
         </div>
         <div className="col">
           <p>Showing {filtered.length} movies in the database.</p>
